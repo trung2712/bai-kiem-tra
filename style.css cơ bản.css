@@ -1,0 +1,76 @@
+/*Class thì phải bắt đầu = dấu chấm (.) */
+.lop-mam-non-a1 {
+	color: red;
+	/* font-size kích cỡ chữ */
+	font-size: 24px;
+}
+
+/* Độ ưu tiên dành cho ID luôn cao hơn CLASS, css sẽ ăn của class trước rồi ghi đè bởi css của id nếu thẻ đó có cả id và class */
+
+/*id thì phải bắt đầu bằng dấu #*/
+#tieu-de-thu-1 {
+	color: red;
+	background: blue;
+}
+
+#tieu-de-thu-2 {
+	color: yellow;
+	background: pink;	
+}
+
+#tieu-de-thu-3 {
+
+	/* color - màu chữ */
+	color: black;
+
+	/* background - màu nền */
+	background: grey;	
+} 
+
+#to-nhat {
+	background: yellow;
+
+	/* padding dùng để giãn cách nội dung cần hiển thị trong box (giãn cách box hiện tại với nội dung bên trong) */
+
+	/* Nếu có 1 giá trị thì hiểu là trên phải trái dưới đều cách 10px */
+	padding: 10px;
+
+	/* nếu có 2 giá trị thì hiểu 20px là trên dưới, 10px là phải trái */
+	padding: 20px 10px;
+
+	/* nếu có 3 giá trị thì hiểu 30px là trên, 20px là phải trái, 10px là dưới*/
+	padding: 30px 20px 10px;
+
+	/* nếu có 4 giá trị thì hiểu 40px là trên, 30px là phải, 20px là dưới, 10px là trái - theo chiều kim đồng hồ bắt đầu bởi trên */
+	padding: 40px 30px 20px 10px;
+
+}
+
+/* margin dùng để giãn cách cái box với các phần tử khác bên ngoài */
+#anh-dep {
+	margin: 10px;
+
+	/* border - viền, khung , tường bao */
+	/* tham số đầu tiên: độ dày 1px 2px 3px */
+	/* tham số thứ 2: màu sắc black, green , blue */
+	/* tham số thứ 3: kiểu hiển thị solid, dotted*/
+	/* các thuộc tính thứ thứ có thể đổi cho nhau */
+	border:  white solid 20px;
+}
+
+
+/* con cách cha bởi dấu cách, các thẻ con ngang hàng nhau cách nhau bởi dấu phẩy */
+#bang-tinh-tien table,td,th {
+	border: 1px solid black;
+	border-spacing: unset;
+	background: white;
+} 
+
+#bang-tinh-tien table {
+	margin-top: 20px;
+}
+
+
+.p408 {
+	border: 10px solid black;
+}

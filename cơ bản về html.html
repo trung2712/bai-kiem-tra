@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- 
+Phần tử HTML <head>
+Phần tử <head> là một khung chứa siêu dữ liệu – metadata (dữ liệu về dữ liệu). HTML metadata là dữ liệu về tài liệu HTML. Metadata không được hiển thị. Metadata thường xác định title, styles, links, scripts của tài liệu và thông tin meta khác.
+ -->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title tiêu đề trang web -->
+	<title>Học HTML không khó</title>
+
+	<!-- Thẻ link để import 1 file css -->
+	<link rel="stylesheet" type="text/css" href="./style.css">
+
+	<!-- Thẻ script để import 1 file javascript -->
+	<script type="text/javascript" src="./javascript.js"></script>
+</head>
+
+<!-- Nội dung của trang web. là cái mà người dùng web sẽ nhìn thìn thấy -->
+<body>
+
+	<!-- 1 thẻ chỉ có duy nhất 1 id nhưng có thể có nhiều class cách nhau bởi dấu cách -->
+	<div id="to-nhat" class="hello">
+		<!--Có thể làm thẻ bao ngoài các thẻ khác hoặc thay thế thẻ p để thể hiện nội dung văn bản, box -->
+		<div>Dùng cho hầu hết các nội dung như văn bản, container, .... 70% 80% nhu cầu sử dụng tag của html</div>
+
+
+
+		<!-- ID - identify - định danh cho 1 đối tượng cụ thể để phân biệt với các đối tượng khác- thường là duy nhất và nên là duy nhất -->
+		<!-- Class - lớp học - cùng lớp thì phải cùng các thuộc tính giống nhau: màu sắc, kích thước, .... dùng cho việc tái sử dụng các style cho các thẻ mà mình muốn nó có cùng kích thước, màu sắc giống nhau, thường là tiêu đề hoặc các phẩn tử của danh sách như li, h1, h2 ..... -->
+
+		<!-- Là thẻ thể hiện nội dung văn bản theo câu hoặc theo đoạn văn, sau p tự động sang dòng tiếp theo -->
+		<p>Tôi yêu <p id="ha-noi">Hà nội</p>
+		<p id="hai-phong">Hải phòng</p></p>
+
+
+
+		<!-- Tất cả h1, h2 , h3, h4.... h6 đều để thể hiện tiêu đề cho bài viết-->
+		<h1>Thường h1 sử dụng như tiêu đề bài viết</h1>
+
+		<h2 id="tieu-de-thu-1" class="lop-mam-non-a1 lop-mam-non-a2">Học java</h2>
+
+		<h2 id="tieu-de-thu-2" class="lop-mam-non-a1 lop-mam-non-a3 lop-mam-non-a4">Học php</h2>
+
+		<h2 id="tieu-de-thu-3" class="lop-mam-non-a1">Học javascript</h2>
+
+
+
+		<!-- Thẻ img thể hiện 1 hình ảnh source - tài nguyên ảnh ( đường dẫn có thể là link trên website hoặc là 1 link dẫn tới file ảnh trong máy tính), alternative - thay thế -->
+		<img id="anh-dep" src="D:\LEARN\HOC_LAP_TRINH_WEB_BAI_1\img1.jpg" alt="Tôi không tìm thấy ảnh đâu cả">
+
+
+		<!-- Span thường được dùng trong giữa 1 văn bản (giữa thẻ div đóng mở hoặc thẻ p đóng mở) -->
+		<div> Tôi yêu <span>Hà nội</span> <span>Hải phòng</span> </p>
+
+
+
+
+		<!-- ul,ol được dùng để hiển thị 1 danh sách: như 1 dãy thứ tự cụ thể hoặc 1 danh sách các công việc cần làm -->
+		<!-- Đã có ul hoặc ol thì phải có li nằm trong, li tương đương với 1 số trong dãy hoặc 1 công việc trong danh sách -->
+		
+		<!-- Unorder list  danh sách không thứ tự , list item - phần tử của danh sách -->
+		<ul style="list-style:;">
+			<li>1</li>
+			<li>2</li>	
+			<li>3</li>
+		</ul>
+
+		<!-- order list Danh sách có thự tự -->
+			<ol>
+				<li>Ăn cơm</li>
+				<br/>
+				<li>Rửa bát</li>	
+				<li>Lau nhà</li>
+			</ol>
+
+
+		<!-- Thẻ input là 1 thẻ để cho người dùng cỏ thể nhập nội dung vào như cái google search -->
+		<p>Nhập tuổi</p>
+		<input type="number" id="input-tuoi" name="nhap-tuoi">
+
+		<p>Nhập tên</p>
+		<input type="text" id="input-ten" name="nhap-ten">
+
+		<p>Nhập họ</p>
+		<input type="text" id="input-ho" name="nhap-ho">
+
+
+		<!-- Button là 1 cái nút bấm để người dùng có thể nhấn vào để xác nhận thông tin mình nhập -->
+		<br>
+		<br>
+		<button id="button-luu-thong-tin" onclick="clickVaoButtonLuuThongTin()">Lưu thông tin</button>
+
+
+		<br>
+		<br>
+		<button id="button-doi-mau-sac" onclick="doiMauBackgroundBoxToNhat()">Đổi màu sắc</button>
+
+		<p id="ket-qua-luu-thong-tin"></p>
+
+
+
+		<!-- br - Thẻ break - ngắt trang hay còn gọi là xuống dòng -->
+		<br/>
+
+
+
+		<!-- Table để hiển thị bảng -->
+
+		<div id="bang-tinh-tien">
+			<table >
+				<!-- thead = table header chứa tiêu đề của bảng -->
+				<thead>
+					<!-- tr = table row - hàng ngang -->
+					<!-- th = table header - nội dung của cột: STT ,nội dung, số tiền -->
+					<tr>
+						<th>STT</th>
+						<th>Nội dung</th>
+						<th>Số tiền</th>
+					</tr>
+				</thead>
+
+				<!-- tbody = table body chứa nội dung của bảng -->
+				<tbody>
+					<!-- tr = table row - hàng ngang -->
+					<!-- td = table data - nội dung của 1 ô trong bảng, 1, mua sách, 30k -->
+					
+					<tr>
+						<td>1</td>
+						<td>Mua sách</td>
+						<td>30k</td>
+					</tr>
+
+					<tr>
+						<td>2</td>
+						<td>Mua vở</td>
+						<td>50k</td>
+					</tr>
+
+					<tr>
+						<td>3</td>
+						<td>Mua bút</td>
+						<td>70k</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+
+
+
+</html>
